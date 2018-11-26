@@ -103,6 +103,19 @@ public class Aufgabe2 {
     }
 
     private static void outputPaddedString(int i, char pad) {
-        outputPaddedString(Integer.toString(i), pad);
+        String revstr = "";
+        String str = "";
+
+        int r = i;
+        do {
+            revstr += (r % 10);
+            r /= 10;
+        } while (r != 0);
+
+        for (int j = 0; j < revstr.length(); j++) {
+            str+=revstr.charAt(revstr.length()-j-1);
+        }
+
+        outputPaddedString(str, pad);
     }
 }
