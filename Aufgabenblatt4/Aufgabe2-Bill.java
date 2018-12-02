@@ -55,7 +55,7 @@ public class Aufgabe2 {
 
             StdDraw.setPenColor(StdDraw.BLACK);
             StdDraw.text(i * t + t / 2,10, ""+i);
-            StdDraw.text(i * t + t / 2, (u > 0) ? u * 2 - 15 : 30, ""+array[i]);
+            StdDraw.text(i * t + t / 2, (u > 0) ? u * 2 - 15 : 30, ""+array[i]+1);
         }
     }
 
