@@ -50,7 +50,7 @@ public class Aufgabe4 {
         if(workArray != null) {
             for (int y = 0; y < workArray.length; y++) {
                 for (int x = 0; x < workArray.length; x++) {
-                    System.out.print(workArray[y][x] + "\t");
+                    System.out.print(workArray[y][x] + " c=8 ");
                 }
                 System.out.println();
             }
