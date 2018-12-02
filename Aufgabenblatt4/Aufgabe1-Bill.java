@@ -55,7 +55,7 @@ public class Aufgabe1 {
     }
 
     //**************************************************************************
-    //**** Notizen und Fragebeantwortungen bitte hier unterhalb durchführen! ***
+    //**** i dont speak deutsch :(( sehr traurig alexa bitte spiel despacito ***
     //**************************************************************************
     //Frage 1:
     // i <= workArray.length is not a valid index
