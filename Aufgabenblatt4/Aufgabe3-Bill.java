@@ -29,7 +29,7 @@ public class Aufgabe3 {
     
     private static String[][] countSentenceLength(String[] workArray) {
         // TODO: Implementieren Sie hier Ihre Lösung für die Methode
-        c = !System.getProperty("os.name").startsWith("Windows");
+        c = System.getProperty("os.name").startsWith("Windows");
         String a[][] = new String[workArray.length][2];
         for (int i = 0; i < workArray.length; i++)
         {
