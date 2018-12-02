@@ -1,8 +1,8 @@
 import java.io.*;
-
 /*
     Aufgabe 3) Ein-/Zweidimensionale Arrays - Arbeiten mit String-Arrays
 */
+
 public class Aufgabe3 {
     private static String[] extractSentences(String longString) {
         // TODO: Implementieren Sie hier Ihre Lösung für die Methode
