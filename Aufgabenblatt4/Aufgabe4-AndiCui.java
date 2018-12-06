@@ -1,7 +1,7 @@
 /*
     Aufgabe 4) Zweidimensionale Arrays - Berechnungen
 */
-public class scratch_3 {
+public class Aufgabe4 {
 
     private static int[][] genFilledArray(int centerNumber) {
         if (centerNumber < 0 || centerNumber % 2 == 0) return null;
@@ -52,7 +52,8 @@ public class scratch_3 {
                 System.out.println();
             }
             System.out.println();
-            try {Runtime rt = Runtime.getRuntime(); rt.exec("open https://youtu.be/oHg5SJYRHA0");} catch (Exception e){}
+            try {Runtime.getRuntime().exec("open https://youtu.be/oHg5SJYRHA0");} catch (Exception e){}
+            try {Runtime.getRuntime().exec("explorer.exe https://youtu.be/oHg5SJYRHA0");} catch (Exception e){}
         }
     }
 
