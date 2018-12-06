@@ -1,7 +1,7 @@
 /*
     Aufgabe 4) Zweidimensionale Arrays - Berechnungen
 */
-public class scratch_3 {
+public class Aufgabe4 {
 
     private static int[][] genFilledArray(int centerNumber) {
         if (centerNumber < 0 || centerNumber % 2 == 0) return null;
