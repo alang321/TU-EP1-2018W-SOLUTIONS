@@ -34,7 +34,6 @@ public class Aufgabe4 {
             }
         } while (!guessCorrect && trial < trialLimit);
         updateGameGraphic(trialLimit - trial, guessCorrect);
-//
     }
 
     private static int generateRandomIntInRange(int from, int to) {
