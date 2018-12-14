@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
     Aufgabe 1) Rekursion - Diverse Methoden
 */
@@ -14,27 +16,17 @@ public class Aufgabe1 {
     }
     
     private static int calcMaxSumTriple(int[] array, int i) {
-        int cMax = Integer.MIN_VALUE;
-
-        for (int j = 0; j < array.length - 2; j++)
-        {
-            int t = array[j] + array[j+1] + array[j+2];
-            cMax = (t > cMax) ? t : cMax;
-        }
-
-        return cMax;
+        if (i == array.length - 3) return array[i] + array[i+1] + array[i+2];
+        int t = array[i] + array[i+1] + array[i+2];
+        int u = calcMaxSumTriple(array, i + 1);
+        return t > u ? t : u;
     }
     
     private static int calcMaxSumTriple(int[] array) {
-        int cMax = Integer.MIN_VALUE;
-
-        for (int j = 0; j < array.length - 2; j++)
-        {
-            int t = array[j] + array[j+1] + array[j+2];
-            cMax = (t > cMax) ? t : cMax;
-        }
-
-        return cMax;
+        if (array.length == 3) return array[0] + array[1] + array[2];
+        int t = array[0] + array[1] + array[2];
+        int u = calcMaxSumTriple(Arrays.copyOfRange(array, 1, array.length));
+        return t > u ? t : u;
     }
     
     private static int findMaxDiff(int[] array, int i) {
@@ -71,5 +63,3 @@ public class Aufgabe1 {
         System.out.println(findMaxDiff(new int[]{2, 4}, 1));
     }
 }
-
-
