@@ -30,15 +30,10 @@ public class Aufgabe1 {
     }
     
     private static int findMaxDiff(int[] array, int i) {
-        int cMax = Integer.MIN_VALUE;
-
-        for (int j = 0; j < i; j++)
-        {
-            int t = Math.abs(array[j] - array[j+1]);
-            cMax = (t > cMax) ? t : cMax;
-        }
-
-        return cMax;
+        if (i == 1) return Math.abs(array[i] - array[i-1]);
+        int t = Math.abs(array[i] - array[i-1]);
+        int u = findMaxDiff(array, i - 1);
+        return t > u ? t : u;
     }
     
     public static void main(String[] args) {
@@ -63,3 +58,5 @@ public class Aufgabe1 {
         System.out.println(findMaxDiff(new int[]{2, 4}, 1));
     }
 }
+
+
