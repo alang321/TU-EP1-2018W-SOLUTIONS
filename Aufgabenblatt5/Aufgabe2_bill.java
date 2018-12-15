@@ -17,7 +17,12 @@ public class Aufgabe2 {
     }
     
     private static String shiftMinCharLeft(String s) {
-        
+        if (s.length() == 0) return s;
+        char cLow = Character.MAX_VALUE;
+        for (int i = 0; i < s.length(); i++) cLow = (s.charAt(i) < cLow) ? s.charAt(i) : cLow;
+        int j = s.indexOf(cLow);
+        if (j == 1) return s.substring(0, j - 1) + cLow + s.charAt(j - 1) + s.substring(j + 1);
+        else return shiftMinCharLeft(s.substring(0, j - 1) + cLow + s.charAt(j - 1) + s.substring(j + 1));
     }
 
     public static void main(String[] args) {
