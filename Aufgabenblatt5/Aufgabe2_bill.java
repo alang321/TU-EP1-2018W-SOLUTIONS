@@ -4,35 +4,20 @@
 public class Aufgabe2 {
     
     private static String insertIndex(String s) {
-        String ret = "";
-        for (int i = 0; i < s.length(); i++)
-        {
-            ret += Integer.toString(i) + s.charAt(i);
-        }
-        return ret;
+        if (s.length() == 0) return s;
+        if (s.length() == 1) return s.length() - 1 + s;
+        return insertIndex(s.substring(0, s.length() - 1)) + (s.length() - 1) + s.charAt(s.length() - 1);
     }
     
     private static String mixStrings(String s1, String s2) {
-        String ret = "";
-        for (int i = 0, j = 0; i < s1.length(); i++, j++)
-        {
-            if (j == s2.length()) j = 0;
-            ret += "" + s1.charAt(i) + s2.charAt(j);
-        }
-        return ret;
+        if (s1.length() == 0) return s1;
+        int t = s1.length();
+        while (t > s2.length()) t -= s2.length();
+        return mixStrings(s1.substring(0, s1.length()-1), s2) + s1.substring(s1.length()-1) + s2.charAt(t - 1);
     }
     
     private static String shiftMinCharLeft(String s) {
-        char cLow = Character.MAX_VALUE;
-        int iCLow = -1;
-        for (int i = 0; i < s.length(); i++)
-        {
-            if (s.charAt(i) < cLow) {
-                cLow =  s.charAt(i);
-                iCLow = i;
-            }
-        }
-        return (iCLow > -1) ? cLow + s.substring(0, iCLow) + s.substring(iCLow + 1) : s;
+        
     }
 
     public static void main(String[] args) {
