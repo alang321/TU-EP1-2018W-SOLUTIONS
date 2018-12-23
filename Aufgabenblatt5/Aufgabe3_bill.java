@@ -2,7 +2,6 @@
     Aufgabe 3) Rekursion - Kreuzmuster
 */
 public class Aufgabe3 {
-    
     private static void drawCrossPattern(int x, int y, int l, boolean c) {
         if (l < 16) return;
         StdDraw.setPenColor(c ? StdDraw.RED : StdDraw.BLUE);
@@ -21,7 +20,6 @@ public class Aufgabe3 {
         StdDraw.enableDoubleBuffering();
 
         drawCrossPattern(0, 0, 512, true);
-
         StdDraw.show();
     }
 }
@@ -30,5 +28,5 @@ public class Aufgabe3 {
 // 1. So it doesnt go on forever
 // 2. No. (Here it is until l < 16
 // 3. 6
-// 4. 4 ^ 5 = 1024
+// 4. SUM 4^0 + 4^1 + ... + 4^5 = 1365
 // 5. comment line 11
